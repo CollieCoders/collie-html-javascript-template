@@ -1,0 +1,35 @@
+section.hero
+  .hero-inner
+    .framework-row
+      .pill
+        img.pill-logo(src="/images/frameworks/React-icon.png" alt="React")
+        span React
+      .pill
+        img.pill-logo(src="/images/frameworks/nextjs-icon.png" alt="Next.js")
+        span Next.js
+      .pill
+        img.pill-logo(src="/images/frameworks/Vite-icon.png" alt="Vite")
+        span Vite
+      .pill.pill-disabled
+        img.pill-logo(src="/images/frameworks/Angular-icon.png" alt="Angular")
+        .pill-text
+          span Angular
+          small Coming soon
+
+    p.hero-kicker Sweeten Your React Templates
+
+    h1.hero-title Writing traditional markup?
+    h1.hero-subtitle Ok, Boomer
+
+    p.hero-body
+      | Collie is an indentation-based template language that compiles directly to JSX and TSX.
+      | Keep React exactly as it is — just write components faster with cleaner, more expressive templates.
+
+    ul.hero-bullets
+      li No new runtime — just plain JSX output.
+      li Works seamlessly with TypeScript.
+      li First-class VS Code support.
+
+    .hero-cta
+      button.btn.btn-primary(type="button") Get Started
+      button.btn.btn-secondary(type="button") Language Basics

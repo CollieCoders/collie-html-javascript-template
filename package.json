@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon server.mjs",
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "collie:build": "node scripts/build-collie.mjs",
+    "collie:watch": "nodemon --watch src/collie --ext collie --exec \"node scripts/build-collie.mjs\""
   },
   "dependencies": {
+    "@collie-lang/compiler": "^2.0.0",
     "express": "^4.21.0"
   },
   "devDependencies": {
