@@ -1,0 +1,25 @@
+section.features.section
+  h2 Why teams pick Collie
+
+  .feature-grid
+    .feature-card
+      i.pi.pi-align-left.feature-icon
+      h3 Indentation-based syntax
+      p Markup with natural indentation, no closing tags, and CSS-like selectors.
+
+    .feature-card
+      i.pi.pi-code.feature-icon
+      h3 Type-safe by design
+      p
+        code #props
+        |  declarations compile to TS interfaces, inheriting React’s inference.
+
+    .feature-card
+      i.pi.pi-bolt.feature-icon
+      h3 Zero-runtime abstraction
+      p Collie prints plain JSX. No runtime packages. No magic.
+
+    .feature-card
+      i.pi.pi-microsoft.feature-icon
+      h3 VS Code companion
+      p Syntax highlighting, formatting, diagnostics, and conversion tools.

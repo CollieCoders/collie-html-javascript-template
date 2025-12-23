@@ -1,0 +1,15 @@
+section.tooling.section
+  h2 Tooling that ships with Collie
+
+  .tooling-grid
+    .tool-card
+      h3 collie
+      p Compiler, CLI, Vite plugin, Next adapter, AST utilities.
+
+    .tool-card
+      h3 collie-vscode
+      p Formatter, diagnostics, JSX ⇄ Collie conversion.
+
+    .tool-card
+      h3 collie/cli
+      p Scaffold, build, watch, and format your Collie templates.

@@ -1,0 +1,18 @@
+section.quickstart.section
+  h2 Quickstart
+
+  .quickstart-grid
+    .qs-card
+      strong Install dependencies
+      pre
+        code pnpm add -D @collie-lang/cli @collie-lang/vite
+
+    .qs-card
+      strong Update config
+      pre
+        code plugins: [collie(), react()]
+
+    .qs-card
+      strong Create your first Collie file
+      pre
+        code import Hero from "./Hero.collie"

@@ -10,7 +10,6 @@
     "collie:watch": "nodemon --watch src/collie --ext collie --exec \"node scripts/build-collie.mjs\""
   },
   "dependencies": {
-    "@collie-lang/compiler": "^2.0.0",
     "express": "^4.21.0"
   },
   "devDependencies": {

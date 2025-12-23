@@ -1,0 +1,19 @@
+footer.footer
+  .footer-inner
+    div
+      .logo-badge Co
+      .footer-brand
+        strong Collie
+        span Friendly templates
+
+    div
+      strong Explore
+      a(href="#") Installation
+      a(href="#") Language Basics
+      a(href="#") CLI Docs
+
+    div
+      strong Community
+      a(href="#") collie
+      a(href="#") collie-vscode
+      a(href="#") VS Code Extension

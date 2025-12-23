@@ -1,0 +1,9 @@
+section.pipeline.section
+  h2 How Collie fits your React stack
+
+  ol.pipeline-list
+    li Install the Collie CLI
+    li Author 
+      code .collie
+      |  files next to your TSX components
+    li The compiler emits predictable TSX that TypeScript fully understands

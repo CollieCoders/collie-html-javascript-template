@@ -11,168 +11,18 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
   <body>
-    <header class="header">
-      <div class="header-inner">
-        <a href="#" class="brand">
-          <img src="/images/collie-lang-logo.png" alt="Collie" />
-          <span>Collie</span>
-        </a>
-
-        <nav class="nav">
-          <a href="#" class="nav-link">Docs</a>
-          <a href="#" class="nav-link">VS Code Extension</a>
-        </nav>
-
-        <button class="menu-toggle">
-          <i class="pi pi-bars"></i>
-        </button>
-      </div>
-    </header>
-
+    <div id="header-collie"></div>
+  
     <main class="main">
-      <section class="hero">
-        <div class="framework-row">
-          <div class="pill"><img src="/images/frameworks/React-icon.png" />React</div>
-          <div class="pill"><img src="/images/frameworks/nextjs-icon.png" />Next.js</div>
-          <div class="pill"><img src="/images/frameworks/Vite-icon.png" />Vite</div>
-          <div class="pill disabled">
-            <img src="/images/frameworks/Angular-icon.png" />
-            Angular <span>Coming Soon</span>
-          </div>
-        </div>
-
-        <p class="kicker">Sweeten Your React Templates</p>
-        <h1 class="title">Writing traditional markup?</h1>
-        <h1 class="subtitle">Ok, Boomer</h1>
-
-        <p class="hero-body">
-          Collie is an indentation-based template language that compiles directly to JSX and TSX.
-          Keep React exactly as it is — just write components faster with cleaner, more expressive
-          templates.
-        </p>
-
-        <ul class="hero-bullets">
-          <li>No new runtime — just plain JSX output.</li>
-          <li>Works seamlessly with TypeScript.</li>
-          <li>First-class VS Code support.</li>
-        </ul>
-
-        <div class="hero-cta">
-          <button class="btn primary">Get Started</button>
-          <button class="btn secondary">Language Basics</button>
-        </div>
-      </section>
-
-      <section class="features section">
-        <h2>Why teams pick Collie</h2>
-
-        <div class="feature-grid">
-          <div class="feature-card">
-            <i class="pi pi-align-left feature-icon"></i>
-            <h3>Indentation-based syntax</h3>
-            <p>Markup with natural indentation, no closing tags, and CSS-like selectors.</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="pi pi-code feature-icon"></i>
-            <h3>Type-safe by design</h3>
-            <p>
-              <code>#props</code> declarations compile to TS interfaces, inheriting React’s inference.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <i class="pi pi-bolt feature-icon"></i>
-            <h3>Zero-runtime abstraction</h3>
-            <p>Collie prints plain JSX. No runtime packages. No magic.</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="pi pi-microsoft feature-icon"></i>
-            <h3>VS Code companion</h3>
-            <p>Syntax highlighting, formatting, diagnostics, and conversion tools.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="pipeline section">
-        <h2>How Collie fits your React stack</h2>
-
-        <ol class="pipeline-list">
-          <li>Install the Collie CLI</li>
-          <li>Author <code>.collie</code> files next to your TSX components</li>
-          <li>The compiler emits predictable TSX that TypeScript fully understands</li>
-        </ol>
-      </section>
-
-      <section class="tooling section">
-        <h2>Tooling that ships with Collie</h2>
-
-        <div class="tooling-grid">
-          <div class="tool-card">
-            <h3>collie</h3>
-            <p>Compiler, CLI, Vite plugin, Next adapter, AST utilities.</p>
-          </div>
-
-          <div class="tool-card">
-            <h3>collie-vscode</h3>
-            <p>Formatter, diagnostics, JSX ⇄ Collie conversion.</p>
-          </div>
-
-          <div class="tool-card">
-            <h3>collie/cli</h3>
-            <p>Scaffold, build, watch, and format your Collie templates.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="quickstart section">
-        <h2>Quickstart</h2>
-
-        <div class="quickstart-grid">
-          <div class="qs-card">
-            <strong>Install dependencies</strong>
-            <pre><code>pnpm add -D @collie-lang/cli @collie-lang/vite</code></pre>
-          </div>
-
-          <div class="qs-card">
-            <strong>Update config</strong>
-            <pre><code>plugins: [collie(), react()]</code></pre>
-          </div>
-
-          <div class="qs-card">
-            <strong>Create your first Collie file</strong>
-            <pre><code>import Hero from "./Hero.collie"</code></pre>
-          </div>
-        </div>
-      </section>
+      <div id="hero-collie"></div>
+      <div id="features-collie"></div>
+      <div id="pipeline-collie"></div>
+      <div id="tooling-collie"></div>
+      <div id="quickstart-collie"></div>
     </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        <div>
-          <div class="logo-badge">Co</div>
-          <div class="footer-brand">
-            <strong>Collie</strong>
-            <span>Friendly templates</span>
-          </div>
-        </div>
-
-        <div>
-          <strong>Explore</strong>
-          <a href="#">Installation</a>
-          <a href="#">Language Basics</a>
-          <a href="#">CLI Docs</a>
-        </div>
-
-        <div>
-          <strong>Community</strong>
-          <a href="#">collie</a>
-          <a href="#">collie-vscode</a>
-          <a href="#">VS Code Extension</a>
-        </div>
-      </div>
-    </footer>
+  
+    <div id="footer-collie"></div>
+  
     <script src="/main.js" type="module"></script>
   </body>
 </html>
