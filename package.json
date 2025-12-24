@@ -4,15 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.mjs",
+    "dev": "concurrently \"npm run collie:watch\" \"npm run dev:server\"",
+    "dev:server": "npm run collie:build && nodemon server.mjs",
     "start": "node server.mjs",
-    "collie:build": "node scripts/build-collie.mjs",
-    "collie:watch": "nodemon --watch src/collie --ext collie --exec \"node scripts/build-collie.mjs\""
+    "collie:build": "node scripts/collie/build.js",
+    "collie:watch": "nodemon --watch . --ext collie --exec \"node scripts/collie/build.js\""
   },
   "dependencies": {
     "express": "^4.21.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "concurrently": "^9.0.1"
   }
 }

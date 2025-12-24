@@ -5,16 +5,18 @@
   <title>Collie – Sweeten Your React Templates</title>
   <meta name="description" content="Collie is an indentation-based template language that compiles to JSX and TSX." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
-
   <link rel="stylesheet" href="/styles.css" />
+  <!-- Collie HTML Runtime -->
+  <script src="https://cdn.collie-lang.org/v1/collie-html-runtime.js" type="module"></script>
+  <!-- Optional: Collie auto-DOM conversion utilities -->
+  <script src="https://cdn.collie-lang.org/v1/collie-convert.js" type="module"></script>
 </head>
   <body>
     <div id="header-collie"></div>
   
     <main class="main">
-      <div id="hero-collie"></div>
+      <div id="homeHero-collie"></div>
       <div id="features-collie"></div>
       <div id="pipeline-collie"></div>
       <div id="tooling-collie"></div>
@@ -22,7 +24,5 @@
     </main>
   
     <div id="footer-collie"></div>
-  
-    <script src="/main.js" type="module"></script>
   </body>
 </html>
