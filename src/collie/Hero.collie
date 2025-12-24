@@ -1,4 +1,4 @@
-#id homeHero
+id homeHero
 
 section.hero
   .hero-inner

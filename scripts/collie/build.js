@@ -54,6 +54,20 @@ function ensureDir(dirPath) {
   }
 }
 
+function toPosixPath(filePath) {
+  return filePath.split(path.sep).join('/')
+}
+
+function stripCollieSuffix(id = '') {
+  return id.replace(/-collie$/i, '') || id
+}
+
+function deriveTemplateId(metaId, relPath) {
+  if (metaId && typeof metaId === 'string') return metaId
+  const fallback = stripCollieSuffix(path.basename(relPath, '.collie'))
+  return fallback || null
+}
+
 function logDiagnostics(label, diagnostics = []) {
   if (!diagnostics?.length) return
   console.warn(`[Collie] Diagnostics for ${label}:`)
@@ -89,8 +103,9 @@ function findCollieFiles(dir, results = []) {
 }
 
 function buildFile(sourcePath) {
-  const relFromRoot = path.relative(PROJECT_ROOT, sourcePath) || path.basename(sourcePath)
-  const baseName = path.basename(sourcePath, '.collie')
+  const relFromRoot = toPosixPath(
+    path.relative(PROJECT_ROOT, sourcePath) || path.basename(sourcePath)
+  )
   try {
     const source = fs.readFileSync(sourcePath, 'utf8')
     const result = compileToHtml(source, {
@@ -98,15 +113,13 @@ function buildFile(sourcePath) {
       pretty: true,
     })
 
-    const metaId = result?.meta?.id
-    const id = metaId || baseName
-    const outPath = path.join(OUT_DIR, `${id}.html`)
-
+    const id = deriveTemplateId(result?.meta?.id, relFromRoot)
     if (!id) {
       console.warn(`[Collie] Unable to determine id for ${relFromRoot}, skipping.`)
       return
     }
 
+    const outPath = path.join(OUT_DIR, `${id}.html`)
     logDiagnostics(relFromRoot, result?.diagnostics)
     ensureDir(path.dirname(outPath))
     fs.writeFileSync(outPath, result?.code ?? '', 'utf8')
